@@ -1,6 +1,8 @@
 # md5
 Custom implementation of md5 in C
+
 Compile with: ```gcc -Wall md5.c -o md5```
+
 Run with: ```./md5```
 
 Output
