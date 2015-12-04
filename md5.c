@@ -152,7 +152,7 @@ unsigned int rotate_left(unsigned int temp, int times)
 
 int main()
 {
-	unsigned char message[64] = "abc";
+	unsigned char message[64] = "123";
 	unsigned long bitlength = strlen((char*)message) * sizeof((char*)message);
 
 	printf("Message(%lu) = %s\n", strlen((char*)message), message);
