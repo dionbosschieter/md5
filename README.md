@@ -5,7 +5,7 @@ It does show the greater amount of code needed to implement the md5 hashing algo
 I do know that the MD5 hashing algorithm is not really used anymore (or actually should not be used any more).
 
 
-I tried to write my own implementation of MD5 to understand how it works, I will cleanup the C code a bit. Just not right now because i'm to bussy ;).
+I tried to write my own implementation of MD5 to understand how it works, I will cleanup the C code a bit. Just not right now because i'm to busy ;).
 This code tries to be as close to the original RFC as possible. 
 
 
