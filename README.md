@@ -1,30 +1,30 @@
 # md5
-Because i am intrigued by how hashing algorithms and encryption algorithms work i tried to write my own implementation of MD5.
+Because I am intrigued by how hashing algorithms and encryption algorithms work I tried to write my own implementation of MD5.
 While this code lacks the implementation for creating a hash of more than 512 bytes of data.
 It does show the greater amount of code needed to implement the md5 hashing algorithm.
-I do know that the MD5 hashing algorithm is not realy used anymore (or actually should not be used any more).
+I do know that the MD5 hashing algorithm is not really used anymore (or actually should not be used any more).
 
 
 I tried to write my own implementation of MD5 to understand how it works, I will cleanup the C code a bit. Just not right now because i'm to bussy ;).
-This code tries to be as close to the original RFC ass possible. 
+This code tries to be as close to the original RFC as possible. 
 
 
 I will continue to reimplement more hashing / encryption algorithms, not because I think the current implementations are not good enough. But because I want to make it easy for anybody to learn these algorithms.
 
 Sources
 -------
-https://www.ietf.org/rfc/rfc1321.txt
-http://www.iusmentis.com/technology/hashfunctions/md5/
-https://en.wikipedia.org/wiki/MD5#Algorithm
-http://rosettacode.org/wiki/MD5/Implementation_Debug
+* https://www.ietf.org/rfc/rfc1321.txt
+* http://www.iusmentis.com/technology/hashfunctions/md5/
+* https://en.wikipedia.org/wiki/MD5#Algorithm
+* http://rosettacode.org/wiki/MD5/Implementation_Debug
 
 Todo
 -----
 * make it work with more than 512 bytes of data.
 * document the code more.
 
-Custom implementation of md5 in C
-
+Usage
+-----
 Compile with: ```gcc -Wall md5.c -o md5```
 
 Run with: ```./md5```
