@@ -1,5 +1,5 @@
 /*
-  Dion Bosschieter implementation of DES,  data encryption standard
+  Dion Bosschieter implementation of MD5, message digest 5 
   Compile&run: gcc -Wall md5.c -o md5 ; ./md5
 */
 #include <stdio.h>
@@ -32,51 +32,6 @@ void print_32_bits(int b)
 		putchar(b & mask ? '1' : '0');
 	}
 	putchar('\n');
-}
-
-void rotate_right(unsigned long* val, unsigned long n, unsigned long* newval)
-{
-	// shift bits zodat je naar links shift of naar rechts shift met 28 bits 
-	// zodat het aan het begin er bij word geplakt
-	*newval = (*val << n) | (*val >> (28L - n));
-	// mask zodat de laatste bits niet mee worden genomen die geshift zijn
-	*newval = *newval & 0xFFFFFFF; 
-}
-
-void permute(unsigned long* input, unsigned long* output, int* permutationTable, int tablelength, int bitlength) 
-{
-	int i;
-	*output = 0L;
-
-	for(i=0;i<tablelength;i++) {
-		if (*input & (1L << (bitlength - permutationTable[i]))) { 
-			*output |= 1L << ((tablelength-1)-i);
-		}
-	}
-}
-
-void permute_int_to_long(int* input, unsigned long* output, int* permutationTable, int tablelength) 
-{
-	int i;
-	*output = 0L;
-
-	for(i=0;i<tablelength;i++) {
-		if (*input & (1L << (32 - permutationTable[i]))) { 
-			*output |= 1L << ((tablelength-1)-i);
-		}
-	}
-}
-
-void permute_int(int* input, int* output, int* permutationTable) 
-{
-	int i;
-	*output = 0L;
-
-	for(i=0;i<32;i++) {
-		if (*input & (1L << (32 - permutationTable[i]))) { 
-			*output |= 1L << ((32-1)-i);
-		}
-	}
 }
 
 void print_hex(unsigned char b[], int bufferLength)
