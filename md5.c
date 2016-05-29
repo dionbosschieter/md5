@@ -1,6 +1,6 @@
 /*
   Dion Bosschieter implementation of MD5, message digest 5
-  Compile&run: gcc -Wall md5.c -o md5 ; ./md5
+  Compile&run: gcc -Wall md5.c -lm -o md5 ; ./md5
 */
 #include <stdio.h>
 #include <stdlib.h>
